@@ -1,8 +1,12 @@
+/* eslint-disable no-undef */
+
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import Test from "./models/TestModels.js";
+import eventsRouter from "./routes/events.js";
+import articlesRoute from "./routes/articles.js";
+
 
 dotenv.config();
 
@@ -13,10 +17,6 @@ const PORT = process.env.PORT || 5001   ;
 app.use(cors());
 app.use(express.json());
 
-// Test route
-app.get("/", (req, res) => {
-  res.send("Backend is running");
-});
 
 // Connect to DB
 mongoose.connect(process.env.MONGO_URI)
@@ -28,20 +28,8 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
 
-// Test route 
-app.get("/test-db", async (req, res) => {
-  console.log("Route /test-db hit");  // <-- log when route is accessed
-  try {
-    const newTest = new Test({ name: "Backend Test", value: 123 });
-    const saved = await newTest.save();
-    console.log("Saved document:", saved);  // <-- log saved document
+// events route
+app.use("/api/events", eventsRouter);
 
-    const allTests = await Test.find();
-    console.log("All documents:", allTests);  // <-- log all documents
-
-    res.json(allTests);
-  } catch (err) {
-    console.error("MongoDB route error:", err);
-    res.status(500).json({ error: err.message });
-  }
-});
+// articles route
+app.use("/api/articles", articlesRoute);

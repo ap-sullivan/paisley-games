@@ -3,6 +3,8 @@ import TopNav from '../components/navigation/TopNav';
 import Hero from '../components/layout/Hero';
 import Intro from '../components/layout/Intro';
 import Games from '../components/layout/Games';
+import Tickets from '../components/layout/Tickets';
+import News from '../components/layout/News';
 
 function Home() {
   return (
@@ -12,8 +14,10 @@ function Home() {
    <Hero/>
    <Intro/>
    <Games/>
-   
-</>
+   {/* <Tickets/> */}
+   <News/>
+
+   </>
   )
 }
 

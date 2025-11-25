@@ -4,7 +4,7 @@ function Intro() {
   return (
     <div>
 
-         <section className="container mx-auto w-3/4 md:w-4/5 xl:w-3/5 flex flex-col items-center justify-center text-black md:mt-16 relative">
+         <section className="container mx-auto flex flex-col items-center justify-center text-black md:mt-16 relative">
                     <div className=" mx-auto flex flex-col justify-center p-4 my-12 md:my-16 lg:my-20 xl:my-24"> 
                        
                         <div className="text-lg flex flex-col lg:flex-row items-center">
