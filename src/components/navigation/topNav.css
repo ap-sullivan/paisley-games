@@ -1,0 +1,119 @@
+.chevron-rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.chevron-normal {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+ 
+/* Base styles for the sliding mobile menu */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Initially off-screen */
+    height: 40%; /* Cover half of the screen */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    transition: left 0.5s ease; 
+    z-index: 10; 
+    padding-top: 5rem;
+    padding-left: 1.5rem;
+    background-color: white;
+
+  }
+  
+  /* Show the menu when open */
+  .menu.open {
+    left: 0; /* Slide the menu into view */
+  }
+
+  /* Submenu styles */
+.menu .group.relative .absolute {
+  display: block; /* Ensure it's visible */
+  position: absolute;
+  top: 0;
+  left:30%; /* Position to the right of the Gallery item */
+  margin-left: 0.5rem; /* Space between Gallery item and submenu */
+  background-color: white;
+  /* box-shadow: 0 4px 6px rgba(0,0, 0, 0.1); */
+
+  padding: 0.5rem 0;
+  z-index: 20; /* Ensure it's above other content */
+}
+  
+  /* Hamburger button styles */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 20; /* Ensure it's clickable above the menu */
+    position: relative;
+    
+  }
+  
+  /* Hamburger bars */
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Transform hamburger into "X" when clicked */
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  
+  /* Ensure the menu is hidden on larger screens */
+  @media (min-width: 768px) {
+    .menu {
+      display: none; 
+    }
+  }
+  
+
+/* Keyframes for the line sliding in */
+@keyframes slideInLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Keyframes for the line sliding out */
+@keyframes slideOutLine {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+.animate-slide-in {
+  animation: slideInLine 0.5s ease forwards;
+}
+
+.animate-slide-out {
+  animation: slideOutLine 0.5s ease forwards;
+}
