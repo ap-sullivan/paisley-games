@@ -1,16 +1,30 @@
-# React + Vite
+### Instructions For Working Locally
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Step 1
 
-Currently, two official plugins are available:
+Clone repo to a folder locally on command line and move into folder paisley-games:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+git clone https://github.com/ap-sullivan/paisley-games.git
+cd paisley-games
 
-## React Compiler
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Step 2
 
-## Expanding the ESLint configuration
+run 'npm install' to install dependencies for front end
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Step 3
+
+Move into the server folder and install dependencies for backend
+
+cd server
+npm install
+
+## Step 4
+
+Create a .env file in the server folder and add the Mongo URI and port (have sent separately)
+
+## Step 5 
+
+Start the backend server (make sure you are in /server folder) by running:
+
+'nodemon index.js' OR if that doesnt work 'npm run dev'
