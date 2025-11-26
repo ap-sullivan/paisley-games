@@ -69,7 +69,7 @@ function News() {
                ))}
 
             <Link
-              to=""
+              to="/news"
               className="font-medium mr-auto text-black tracking-wide rounded shadow hover:shadow-lg transition ease-in-out duration-300 py-2 px-4"
             >
               View All
