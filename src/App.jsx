@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import Events from './pages/Events';
 import Contact from './pages/Contact';
 import News from './pages/News';
-import Dashboard from './pages/Dashboard';
+
 function App() {
 
 
@@ -16,7 +16,6 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/news" element={<News />} />
-        <Route path="/dashboard" element={<Dashboard/>}/>
       </Routes>
     </Router>
   )
