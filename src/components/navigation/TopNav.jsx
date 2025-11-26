@@ -89,7 +89,7 @@ function TopNav() {
           <Link to="/local-info" className='mx-2 duration-100 group-hover:text-grey-darkest group-hover:border-b-2 group-hover:border-grey-dark'>Local Info</Link>
         </div>
         <div className="group">
-          <HashLink to="/#contact" className='mx-2 duration-100 group-hover:text-grey-darkest group-hover:border-b-2 group-hover:border-grey-dark '>Contact</HashLink>
+          <HashLink to="/contact" className='mx-2 duration-100 group-hover:text-grey-darkest group-hover:border-b-2 group-hover:border-grey-dark '>Contact</HashLink>
         </div>
         
       </div>
