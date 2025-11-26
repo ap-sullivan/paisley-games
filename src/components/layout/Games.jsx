@@ -54,7 +54,7 @@ function Games() {
 
           </div>
 
-          <Link to="/games">
+          <Link to="/events">
             <h3 className="hover:cursor-pointer text-lg text-center md:text-left mt-12 tracking-wide hover:underline text-[#2A2D22]">
               See all games
             </h3>

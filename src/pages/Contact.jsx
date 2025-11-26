@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Contact = () => {
     return (
-        <div className="min-h-screen flex items-center justify-center  p-6">
+        <div className="min-h-screen flex items-center justify-center bg-linear-to-b 
+        from-[#F1FCF7] 
+        via-[#D3F1DA] 
+        to-[#85A986]  p-6">
             <div className="bg-[#F1FCF7] p-8 rounded-lg shadow-lg w-full max-w-md border border-[#D3F1DA]">
 
                 <h2 className="text-2xl font-bold mb-6 text-[#2A2D22]">

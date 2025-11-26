@@ -77,7 +77,7 @@ export default function Tickets() {
             rel="noopener noreferrer"
             className="inline-block px-4 py-2 bg-[#5A6C57] text-[#F1FCF7] rounded hover:bg-[#525B44] transition"
           >
-            Open Eventbrite listing
+            Get your tickets here!
           </a>
         </div>
 

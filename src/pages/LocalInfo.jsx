@@ -1,9 +1,13 @@
 import React from "react";
 import TopNav from "../components/navigation/TopNav";
+import Footer from "../components/navigation/Footer";
 
 function LocalInfo() {
   return (
-    <div className="min-h-screen bg-[#F1FCF7] pb-20">
+    <div className="min-h-screen bg-[#F1FCF7] bg-linear-to-b 
+        from-[#F1FCF7] 
+        via-[#D3F1DA] 
+        to-[#85A986] ">
       
       <TopNav />
 
@@ -12,7 +16,7 @@ function LocalInfo() {
         <h1 className="text-4xl md:text-5xl font-bold text-[#2A2D22]">
           About Paisley
         </h1>
-        <p className="text-[#525B44] max-w-2xl mx-auto mt-4 text-lg">
+        <p className="text-[#2A2D22] max-w-2xl mx-auto mt-4 text-lg">
           Discover the heritage, culture, and hidden gems of Paisley —
           one of Scotland’s most historic towns.
         </p>
@@ -136,9 +140,12 @@ function LocalInfo() {
             ></iframe>
           </div>
         </section>
-
+    
       </div>
+      <Footer />
     </div>
+
+    
   );
 }
 
