@@ -28,8 +28,7 @@ function News() {
                             Updates from The Scottish Games
                         </h1>
                         <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
-                            Quam hic dolore cumque voluptate rerum beatae et quae, tempore sunt,
-                            debitis dolorum officia aliquid explicabo? Excepturi, voluptate?
+                            Sign up to our newsletter to stay updated with the latest news and articles from The Scottish Games.
                         </p>
                     </div>
 
