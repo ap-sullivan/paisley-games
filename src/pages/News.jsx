@@ -86,53 +86,6 @@ function News() {
 
                         {/* Sidebar */}
                         <aside className="space-y-6">
-                            {/* Search */}
-                            <div className="bg-white p-4 rounded-lg shadow-sm">
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Search
-                                </label>
-                                <input
-                                    type="search"
-                                    placeholder="Search posts..."
-                                    className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                                />
-                            </div>
-
-                            {/* Recent posts */}
-                            <div className="bg-white p-4 rounded-lg shadow-sm">
-                                <h3 className="text-lg font-medium mb-3">Recent Posts</h3>
-                                <ul className="space-y-3">
-                                    {articles.slice(0, 6).map((a) => (
-                                        <li key={a._id} className="flex items-center space-x-3">
-                                            <img
-                                                src={a.image_1}
-                                                alt={a.title}
-                                                className="w-12 h-12 object-cover rounded"
-                                            />
-                                            <Link
-                                                to={`/articles/${a._id}`}
-                                                className="text-sm text-gray-800 hover:underline"
-                                            >
-                                                {truncateWords(a.title, 8)}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                    {articles.length === 0 && (
-                                        <li className="text-sm text-gray-500">No posts yet</li>
-                                    )}
-                                </ul>
-                            </div>
-
-                            {/* Categories */}
-                            <div className="bg-white p-4 rounded-lg shadow-sm">
-                                <h3 className="text-lg font-medium mb-3">Categories</h3>
-                                <div className="flex flex-wrap gap-2">
-                                    <button className="px-3 py-1 text-sm bg-gray-100 rounded">Announcements</button>
-                                    <button className="px-3 py-1 text-sm bg-gray-100 rounded">Development</button>
-                                    <button className="px-3 py-1 text-sm bg-gray-100 rounded">Events</button>
-                                    <button className="px-3 py-1 text-sm bg-gray-100 rounded">Media</button>
-                                </div>
-                            </div>
 
                             {/* Newsletter */}
                             <div className="bg-white p-4 rounded-lg shadow-sm">
