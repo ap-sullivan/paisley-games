@@ -5,6 +5,7 @@ import Intro from '../components/layout/Intro';
 import Games from '../components/layout/Games';
 import Tickets from '../components/layout/Tickets';
 import News from '../components/layout/News';
+import Footer from '../components/navigation/Footer';
 
 function Home() {
   return (
@@ -14,9 +15,9 @@ function Home() {
    <Hero/>
    <Intro/>
    <Games/>
-   {/* <Tickets/> */}
+   <Tickets/>
    <News/>
-
+   <Footer/>
    </>
   )
 }
