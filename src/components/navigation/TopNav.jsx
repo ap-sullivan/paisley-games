@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './topNav.css';
@@ -25,8 +25,8 @@ function TopNav() {
       {/* LOGO WITH ANIMATION */}
       <div className="relative z-30 group">
         <NavLink to="/">
-          <h2 className="text-2xl lg:text-3xl relative inline-block">
-            Paisley Highland Games
+          <h2 className="text-2xl lg:text-4xl font-extrabold relative inline-block text-[#5A6C57]">
+           P H G
             {/* Animated underline */}
             <span className="absolute left-0 -bottom-1 w-0 h-[3px] bg-[#5A6C57] transition-all duration-500 group-hover:w-full"></span>
           </h2>
@@ -63,7 +63,7 @@ function TopNav() {
 
             <HiChevronDown
               onClick={toggleSubmenu}
-              className={`cursor-pointer ml-0 text-[#2A2D22] transition-transform duration-300 ${submenuOpen ? "rotate-180" : "rotate-0"}`}
+              className={`cursor-pointer ml-0 text-[#2A2D22] transition-transform duration-300 mr-3 ${submenuOpen ? "rotate-180" : "rotate-0"}`}
             />
           </div>
 
@@ -75,18 +75,32 @@ function TopNav() {
               <NavLink to="/events/cabor-toss" className="block px-4 py-2 hover:bg-[#D3F1DA]">
                 Cabor Toss
               </NavLink>
-              <NavLink to="/piping" className="block px-4 py-2 hover:bg-[#D3F1DA]">
+              <NavLink to="/events/piping" className="block px-4 py-2 hover:bg-[#D3F1DA]">
                 Piping Competition
               </NavLink>
             </div>
           )}
         </div>
 
+           {/* NEWS */}
+        <NavLink
+          to="/news"
+          className={({ isActive }) =>
+            `mx-2 duration-100 pb-1 mr-4 ${
+              isActive
+                ? "border-b-2 border-[#5A6C57] text-[#5A6C57]"
+                : "hover:text-[#525B44] hover:border-b-2 hover:border-[#525B44]"
+            }`
+          }
+        >
+          News
+        </NavLink>
+
         {/* LOCAL INFO */}
         <NavLink
           to="/local"
           className={({ isActive }) =>
-            `mx-2 duration-100 pb-1 ${
+            `mx-2 duration-100 pb-1 mr-4 ${
               isActive
                 ? "border-b-2 border-[#5A6C57] text-[#5A6C57]"
                 : "hover:text-[#525B44] hover:border-b-2 hover:border-[#525B44]"
@@ -115,6 +129,7 @@ function TopNav() {
       {/* MOBILE MENU */}
       <div className={`menu ${isOpen ? "open" : ""} md:hidden text-2xl bg-[#F1FCF7] text-[#2A2D22]`}>
         <NavLink to="/" onClick={toggleMenu} className="block mb-2">Home</NavLink>
+         <NavLink to="/news" onClick={toggleMenu} className="block mb-2">News</NavLink>
         <NavLink to="/events" onClick={toggleMenu} className="block mb-2">Events</NavLink>
         <NavLink to="/local" onClick={toggleMenu} className="block mb-2">Local Info</NavLink>
         <NavLink to="/contact" onClick={toggleMenu} className="block">Contact</NavLink>

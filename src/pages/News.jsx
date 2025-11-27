@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import TopNav from "../components/navigation/TopNav";
+import Footer from "../components/navigation/Footer";
 
 function News() {
     const [articles, setArticle] = useState([]);
@@ -20,6 +22,9 @@ function News() {
 
     return (
         <>
+
+        <TopNav/>
+
             <div className="w-full flex justify-center items-start min-h-screen py-12">
                 <div className="container px-6 max-w-6xl">
 
@@ -118,6 +123,8 @@ function News() {
                     </div>
                 </div>
             </div>
+
+            <Footer/>
         </>
     );
 }

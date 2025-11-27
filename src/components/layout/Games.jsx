@@ -18,7 +18,7 @@ function Games() {
         <div className="px-6 py-16">
 
           <div className="flex flex-col pb-4 md:pb-6 text-left w-full max-w-5xl mx-auto md:ml-0 text-[#2A2D22]">
-            <h2>Games</h2>
+            <h2 className="uppercase mb-2 font-bold">Events</h2>
             <h3 className="text-3xl text-[#2A2D22]">Lorem, ipsum dolor.</h3>
           </div>
 
@@ -28,19 +28,21 @@ function Games() {
               <Link key={event._id} className="w-full sm:w-auto">
                 <div className="flex flex-col justify-between h-full text-[#2A2D22]">
 
-                  <div className="flex flex-col sm:w-56 md:w-auto pb-12">
-                    <img
-                      src="./images/shotput.jpg"
-                      alt=""
-                      className="object-contain mx-auto border border-[#5A6C57]"
-                    />
+                  <div className="flex flex-col sm:w-56 md:w-72 pb-12">
+                    <div className="w-72 h-72 overflow-hidden border border-[#5A6C57] mx-auto rounded-xl">
+                      <img
+                        src={event.imageURL}
+                        alt=""
+                        className="w-full h-full object-cover "
+                      />
+                    </div>
 
-                    <h2 className="text-lg font-bold uppercase text-left">
+                    <h2 className="text-lg font-bold uppercase text-left mt-4">
                       {event.name}
                     </h2>
 
                     <p className="pb-4">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit...
+                      {event.description}
                     </p>
                   </div>
 

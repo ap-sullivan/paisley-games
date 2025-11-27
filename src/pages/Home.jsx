@@ -5,6 +5,7 @@ import Intro from '../components/layout/Intro';
 import Games from '../components/layout/Games';
 import Tickets from '../components/layout/Tickets';
 import News from '../components/layout/News';
+import Contact from '../components/layout/Contact'
 import Footer from '../components/navigation/Footer';
 
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
    <Games/>
    <Tickets/>
    <News/>
+   <Contact/>
    <Footer/>
    </>
   )

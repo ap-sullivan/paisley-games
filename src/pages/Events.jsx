@@ -14,9 +14,10 @@ function Events() {
   }, []);
 
   return (
+    <>
     <div
       className="
-        min-h-screen 
+        min-h-screen pb-16
         bg-linear-to-b 
         from-[#F1FCF7] 
         via-[#D3F1DA] 
@@ -59,7 +60,7 @@ function Events() {
               {/* IMAGE */}
               <div className="w-full md:w-1/3 h-56 md:h-64 overflow-hidden">
                 <img
-                  src={event.image || '/images/shotput.jpg'}
+                  src={event.imageURL || '/images/shotput.jpg'}
                   alt={event.name}
                   className="w-full h-full object-cover border-r border-[#D3F1DA]"
                 />
@@ -83,10 +84,13 @@ function Events() {
         ))}
       </div>
 
-      {/* FOOTER */}
-      <Footer />
+  
 
     </div>
+    
+      <Footer />
+    </>
+
   );
 }
 

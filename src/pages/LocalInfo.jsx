@@ -128,7 +128,7 @@ function LocalInfo() {
             Find Paisley
           </h2>
 
-          <div className="w-full h-96 border border-[#85A986] rounded-lg overflow-hidden shadow">
+          <div className="w-full h-96 border border-[#85A986] rounded-lg overflow-hidden shadow mb-16">
             <iframe
               title="map"
               width="100%"

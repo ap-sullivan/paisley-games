@@ -37,7 +37,7 @@ export default function Tickets() {
       <div className="w-full max-w-3xl px-4">
 
         <h2 className="text-2xl font-semibold mb-6 text-center text-[#2A2D22]">
-          Get Tickets (won't load on localhost)
+          Get Tickets (Eventbrite widget won't load on localhost)
         </h2>
 
         <div id="eventbrite-widget-container-1975226357206">

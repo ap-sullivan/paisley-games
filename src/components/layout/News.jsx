@@ -43,7 +43,7 @@ function News() {
                 className="p-4 rounded-xl group sm:flex space-x-6 bg-[#D3F1DA]/50 shadow-xl hover:rounded-2xl"
               >
                 <img
-                  src={article.image_1}
+                  src={article.Image_1}
                   alt={article.title}
                   loading="lazy"
                   width="1000"

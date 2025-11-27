@@ -1,21 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import TopNav from '../components/navigation/TopNav';
-import Footer from '../components/navigation/Footer';
+import React from 'react'
 
-const Contact = () => {
+function Contact() {
     return (
         <>
-        <TopNav/>
-        <div className="min-h-[calc(100vh-5rem)] flex items-center justify-center bg-linear-to-b 
-        from-[#F1FCF7] 
-        via-[#D3F1DA] 
-        to-[#85A986]  p-6">
-            <div className="bg-[#f7fbf9] p-8 rounded-lg shadow-lg w-full max-w-md border border-[#D3F1DA]">
+            <div className="flex items-center justify-center mt-16 mb-32  ">
 
-                <h2 className="text-2xl font-bold mb-6 text-[#2A2D22]">
-                    Contact Us
-                </h2>
+            <div className="container px-6 max-w-xl bg-[#F1FCF7] py-8 rounded-xl ">
+                 <h2 className="uppercase mb-2 font-bold">Contact</h2>
+
+              <h3 className="text-3xl mb-3 text-[#2A2D22]">
+               Get in Touch
+              </h3>
 
                 <form className="space-y-4">
 
@@ -64,14 +59,15 @@ const Contact = () => {
 
                 </form>
 
-               
+
 
             </div>
-        </div>
-        <Footer/>
+            </div>
+
         </>
 
-    );
+
+    )
 }
 
-export default Contact;
+export default Contact
