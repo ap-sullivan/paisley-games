@@ -5,7 +5,7 @@ function News() {
   const [articles, setArticle] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5001/api/articles")
+    fetch("https://paisley-highland-games-gamma.vercel.app/api/articles")
       .then(res => res.json())
       .then(data => setArticle(data))
       .catch(err => console.log("Error fetching events:", err));

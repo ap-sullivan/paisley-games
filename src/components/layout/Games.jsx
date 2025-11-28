@@ -6,7 +6,7 @@ function Games() {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5001/api/events")
+    fetch("https://paisley-highland-games-gamma.vercel.app/api/events")
       .then(res => res.json())
       .then(data => setEvents(data))
       .catch(err => console.log("Error fetching events:", err));
