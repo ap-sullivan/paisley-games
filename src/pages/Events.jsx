@@ -6,8 +6,9 @@ import Footer from "../components/navigation/Footer";
 function Events() {
   const [events, setEvents] = useState([]);
 
-  useEffect(() => {
-    // fetch("http://localhost:5001/api/events")
+     // fetch("http://localhost:5001/api/events")
+  
+     useEffect(() => {
     fetch("https://paisley-games.onrender.com/api/events")
       .then((res) => res.json())
       .then((data) => setEvents(data))

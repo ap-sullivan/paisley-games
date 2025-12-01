@@ -1,6 +1,5 @@
 
-import './App.css'
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 import Home from './pages/Home';
 import Events from './pages/Events';
 import Contact from './pages/Contact';
@@ -8,23 +7,17 @@ import News from './pages/News';
 import LocalInfo from './pages/LocalInfo';
 import Dashboard from './pages/Dashboard';
 
+const router = createBrowserRouter([
+  { path: "/", element: <Home /> },
+  { path: "/events", element: <Events /> },
+  { path: "/contact", element: <Contact /> },
+  { path: "/news", element: <News /> },
+  { path: "/local", element: <LocalInfo /> },
+  { path: "/dashboard", element: <Dashboard /> }
+]);
+
 function App() {
-
-
-  return (
-     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/local" element={<LocalInfo />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        
-        
-      </Routes>
-    </Router>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

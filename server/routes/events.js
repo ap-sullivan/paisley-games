@@ -3,6 +3,7 @@ import Event from "../models/Event.js";
 
 const router = express.Router();
 
+
 // GET all events
 router.get("/", async (req, res) => {
   try {

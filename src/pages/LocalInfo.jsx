@@ -8,10 +8,10 @@ function LocalInfo() {
         from-[#F1FCF7] 
         via-[#D3F1DA] 
         to-[#85A986] ">
-      
+
       <TopNav />
 
-      {/* SIMPLE PAGE HEADER */}
+      {/* PAGE HEADER */}
       <div className="text-center py-12 px-6">
         <h1 className="text-4xl md:text-5xl font-bold text-[#2A2D22]">
           About Paisley
@@ -64,7 +64,7 @@ function LocalInfo() {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            
+
             <div className="bg-[#F1FCF7] border border-[#D3F1DA] rounded-lg shadow overflow-hidden">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Paisley_Abbey_from_North_West_-_Leaning_western_gable_-_125mp.jpg/960px-Paisley_Abbey_from_North_West_-_Leaning_western_gable_-_125mp.jpg"
@@ -129,7 +129,7 @@ function LocalInfo() {
           </h2>
 
           <div className="w-full h-96 border border-[#85A986] rounded-lg overflow-hidden shadow mb-16">
-            <iframe
+            {/* <iframe
               title="map"
               width="100%"
               height="100%"
@@ -137,15 +137,26 @@ function LocalInfo() {
               loading="lazy"
               allowFullScreen
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2232.4127704383484!2d-4.424146321832052!3d55.84499767165312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4888455b4d4a79af%3A0xdbc93450ccaa43d5!2sPaisley%20Abbey!5e0!3m2!1sen!2suk!4v1700000000000"
-            ></iframe>
+            ></iframe> */}
+
+            <iframe
+              src="https://www.google.com/maps/d/u/0/embed?mid=1_UrzfMZgWJ1TT4volTju4JyNPr2HfYg&ehbc=2E312F"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+
           </div>
         </section>
-    
+
       </div>
       <Footer />
     </div>
 
-    
+
   );
 }
 

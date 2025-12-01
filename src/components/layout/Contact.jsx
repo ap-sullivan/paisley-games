@@ -23,6 +23,7 @@ function Contact() {
                             id="name"
                             className="w-full px-4 py-2 border border-[#D3F1DA] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5A6C57] text-[#2A2D22] bg-white"
                             placeholder="Your Name"
+                            required
                         />
                     </div>
 
@@ -35,6 +36,7 @@ function Contact() {
                             id="email"
                             className="w-full px-4 py-2 border border-[#D3F1DA] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5A6C57] text-[#2A2D22] bg-white"
                             placeholder="Your Email"
+                            required
                         />
                     </div>
 
